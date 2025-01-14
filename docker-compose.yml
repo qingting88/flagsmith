@@ -11,6 +11,8 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: flagsmith
     container_name: flagsmith_postgres
+    ports:
+      - 5432:5432
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
@@ -22,6 +24,9 @@ services:
 
   flagsmith:
     image: flagsmith.docker.scarf.sh/flagsmith/flagsmith:latest
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
     environment:
       # All environments variables are available here:
       # API: https://docs.flagsmith.com/deployment/locally-api#environment-variables
@@ -71,6 +76,9 @@ services:
   # in the application environment
   flagsmith_processor:
     image: flagsmith.docker.scarf.sh/flagsmith/flagsmith:latest
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
     environment:
       DATABASE_URL: postgresql://postgres:password@postgres:5432/flagsmith
       USE_POSTGRES_FOR_ANALYTICS: 'true'

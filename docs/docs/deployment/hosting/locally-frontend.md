@@ -87,8 +87,8 @@ Current variables used between 'frontend/environment.js' and 'frontend/common/pr
   signups.
 - `PREVENT_FORGOT_PASSWORD`: Determines whether to prevent forgot password functionality, useful for LDAP/SAML. Set it
   to any value to prevent forgot password functionality.
-- `PREVENT_EMAIL_PASSWORD`: Disables email address signup, login and change email functionality.
-- `ENABLE_MAINTENANCE_MODE`: Puts the site into maintenance mode. Set it to any value to enable maintenance.
+- `PREVENT_EMAIL_PASSWORD`: Disables email address signup, login and change email functionality.禁止电子邮箱注册/登陆或者修改邮箱等
+- `ENABLE_MAINTENANCE_MODE`: Puts the site into maintenance mode. Set it to any value to enable maintenance. 将站点置于维护模式。将其设置为任意值以启用维护。
 - `AMPLITUDE_API_KEY`: The Amplitude key to use for behaviour tracking.
 - `MIXPANEL_API_KEY`: Mixpanel analytics key to use for behaviour tracking.
 - `SENTRY_API_KEY`: Sentry key for error reporting.

@@ -388,7 +388,7 @@ const Utils = Object.assign({}, require('./base/_utils'), {
         ? [AccountStore.getActiveOrgPlan()]
         : null
       : AccountStore.getPlans()
-
+console.log("plans",plans)
     if (!plans || !plans.length) {
       return false
     }
@@ -396,6 +396,7 @@ const Utils = Object.assign({}, require('./base/_utils'), {
       plans.map((plan: string) => Utils.getPlanPermission(plan, feature)),
       (perm) => !!perm,
     )
+    console.log("found",found)
     return !!found
   },
   getProjectColour(index: number) {

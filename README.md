@@ -84,3 +84,5 @@ REST calls to the API.
 Thank you to [Uffizzi](https://www.uffizzi.com) for providing ephemeral environments to preview pull requests.
 
 <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=e9b19423-eb7d-4b03-b325-481d10d1a9a4" />
+
+installing vmnetd: retrieving vmnetd version from /Library/LaunchDaemons/com.docker.vmnetd.plist: reading plist /Library/LaunchDaemons/com.docker.vmnetd.plist: open /Library/LaunchDaemons/com.docker.vmnetd.plist: no such file or directory

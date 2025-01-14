@@ -56,6 +56,8 @@ const ChangeRequestsPage = class extends Component {
       ChangeRequestStore.scheduled[environmentId] &&
       ChangeRequestStore.scheduled[environmentId]
 
+      console.log("ChangeRequestStore",environmentId,ChangeRequestStore)
+
     return (
       <div
         data-test='change-requests-page'
@@ -67,6 +69,11 @@ const ChangeRequestsPage = class extends Component {
             {featureDescriptions.SCHEDULE_FLAGS.description}
           </PageTitle>
         )}
+        <div>
+        {ChangeRequestStore.isLoading?1:0}-
+                    {!!dataScheduled}-
+                    {!!OrganisationStore.model}
+        </div>
         <PlanBasedBanner feature={'SCHEDULE_FLAGS'} theme={'page'}>
           <Flex>
             {

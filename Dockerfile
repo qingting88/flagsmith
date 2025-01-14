@@ -51,7 +51,7 @@
 ARG CI_COMMIT_SHA=dev
 
 # Pin runtimes versions
-ARG NODE_VERSION=16
+ARG NODE_VERSION=20
 ARG PYTHON_VERSION=3.11
 
 FROM public.ecr.aws/docker/library/node:${NODE_VERSION}-bookworm as node
@@ -66,7 +66,6 @@ WORKDIR /build
 COPY frontend/package.json frontend/package-lock.json frontend/.npmrc ./frontend/.nvmrc ./frontend/
 COPY frontend/bin/ ./frontend/bin/
 COPY frontend/env/ ./frontend/env/
-
 ARG ENV=selfhosted
 RUN cd frontend && ENV=${ENV} npm ci --quiet --production
 

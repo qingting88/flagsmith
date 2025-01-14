@@ -1,6 +1,8 @@
 const globalThis = typeof window === 'undefined' ? global : window
+console.log("globalThis.projectOverrides",globalThis.projectOverrides)
 module.exports = global.Project = {
-  api: 'http://localhost:8000/api/v1/',
+  api: 'http://localhost:8000/api/v1/', //FLAGSMITH_PROXY_API_URL
+  // api:'http://localhost:8006/api/v1',
   chargebee: {
     site: 'flagsmith-test',
   },
